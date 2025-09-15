@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import emailjs from "emailjs-com";
 import {
   Circle,
   Code,
@@ -118,13 +119,26 @@ export default function Home() {
   }, []);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    }, 3000);
-  };
+  e.preventDefault();
+  emailjs
+    .send(
+      "service_4kedviq",   // from EmailJS dashboard
+      "template_it90j7b",  // from EmailJS dashboard
+      formData,
+      "0uSVC4BE--_wze0Zx"       // public key from EmailJS
+    )
+    .then(() => {
+      setSubmitted(true);
+
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      }, 3000);
+    })
+    .catch((err) => {
+      console.error("EmailJS Error:", err);
+    });
+};
 
   const handleChange = (e) => {
     setFormData({
