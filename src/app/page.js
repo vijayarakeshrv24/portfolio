@@ -606,19 +606,7 @@ export default function Home() {
                   Send a Message
                 </h3>
 
-                {submitted && (
-                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <p className="text-green-800 font-medium">
-                        Message sent successfully!
-                      </p>
-                    </div>
-                    <p className="text-green-700 text-sm mt-1">
-                      I&apos;ll get back to you within 24 hours.
-                    </p>
-                  </div>
-                )}
+                
 
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -651,7 +639,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-
+                  
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Subject *
@@ -694,6 +682,19 @@ export default function Home() {
                     Typically responds within 24 hours
                   </p>
                 </div>
+                {submitted && (
+                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-600" />
+                      <p className="text-green-800 font-medium">
+                        Message sent successfully!
+                      </p>
+                    </div>
+                    <p className="text-green-700 text-sm mt-1">
+                      I&apos;ll get back to you within 24 hours.
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
