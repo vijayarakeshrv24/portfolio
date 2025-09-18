@@ -35,7 +35,7 @@ export default function Home() {
       description:
         "Enterprise-grade weather analytics platform featuring real-time data visualization, predictive forecasting, and multi-city comparison tools with responsive design.",
       image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
+        "/weather.jpeg",
       technologies: [
         "React.js",
         "TypeScript",
@@ -48,14 +48,14 @@ export default function Home() {
       category: "Frontend Development",
     },
     {
-      title: "E-Commerce Platform",
+      title: "Chatbot",
       description:
-        "Full-stack e-commerce solution with advanced features including user authentication, payment processing, inventory management, and administrative dashboard.",
+        "Built an AI-powered chatbot using Google Gemini API with memory, real-time streaming responses, and a modern React/Next.js interface",
       image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["Next.js", "Node.js", "MongoDB", "Stripe API", "JWT"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "/chatbot.png",
+      technologies: ["Next.js", "Vercel AI SDK", "Gemini"],
+      liveUrl: "https://chatbot-red-mu-89.vercel.app/",
+      githubUrl: "https://github.com/vijayarakeshrv24/chatbot",
       category: "Full Stack Development",
     },
     {
